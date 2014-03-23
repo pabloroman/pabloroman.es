@@ -1,0 +1,56 @@
+
+
+body { background: url(assets/images/wood_bg.jpg); }
+
+
+
+/* =Layout
+-------------------------------------------------------------- */
+
+#cv { margin: 50px auto; background: #fff; max-width: 960px; box-shadow: rgba(0,0,0,0.5) 0px 3px 7px; position: relative; font-size: 0.875em; }
+
+#paper2 { margin-left: 0px; z-index: -2; transform: rotate(-3deg); -moz-transform: rotate(-2deg); -o-transform: rotate(-2deg); -webkit-transform: rotate(-2deg); -ms-transform: rotate(-2deg); background-color: #f4f4f4;; top: -4px; }
+#paper3 { margin-left: 10px; z-index: -1; transform: rotate(1deg); -moz-transform: rotate(1deg); -o-transform: rotate(1deg); -webkit-transform: rotate(1deg); -ms-transform: rotate(1deg); background-color: #f2f2f2; top: -1px; }
+#paper2, #paper3 { width: 800px; height: 100%; position: absolute; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); left: -5px; }
+#paper1 { padding: 8%; }
+
+.cv_page { margin-bottom: 1em; position: relative; }
+section { width: 100%; border-bottom: 1px dotted #e2e2e2; padding: 1em 0; clear: both; display: inline-block; }
+aside { width: 33%; float: left; }
+aside p { font-size: 0.875em; color: #999; margin-bottom: 0; font-family: "Lora", Georgia, serif; }
+.content { width: 66%; float: right; }
+.content .links { font-size: 0.688em; color: #999; }
+.content .links p { margin-bottom: 0; }
+.content .links p:last-child { margin-bottom: 1em; }
+
+#cv h1 { color: #000; font-weight: 700; font-size: 2.25em; letter-spacing: -1px; text-align: right; border-bottom: 4px solid #EE0013; margin-bottom: 20px; }
+#cv h2 { color: #EE0013; font-weight: 600; font-size: 1.750em; letter-spacing: -1px; margin-bottom: 0; }
+#cv h3 { color: #000; font-weight: 600; font-size: 1.125em; }
+#cv ul { list-style: disc; list-style-position: inside; margin-bottom: 10px; }
+
+#cv h3 a { color: #000; font-weight: 700; }
+
+#cv .colophon { text-align: center; color: #B3B3B3; font-style: italic; font-size: 0.875em; }
+
+@media (max-width: 800px) {
+	#paper2, #paper3 { display: none; }
+	#wrapper { margin: 0; }
+	body { background: #fff; }
+	.site-header { display: none; }
+	#cv { margin: 0; }
+}
+
+@media (max-width: 480px) {
+	aside, .content { float: none; width: 100%; }
+}
+
+@media print {
+    header { display: none; }
+    body { background: #fff; color: #000; }
+    #paper2, #paper3 { display: none; }
+    #paper1 { padding: 4%; }
+    #cv { margin: 0 auto; box-shadow: none; font-size: 9pt; width: 100%; max-width: none; }
+    #cv a { text-decoration: none; font-weight: bold; color: #000; }
+    a[href*="politweets"]:after, a[href*="heavymetal"]:after { content: " [" attr(href) "] "; font-weight: normal; }
+}
+

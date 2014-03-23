@@ -1,0 +1,337 @@
+/*
+Theme Name: Stijlfabriek
+Theme URI: 
+Author: Pablo Roman
+Author URI: http://pabloroman.es/
+Description: A custom made theme for the personal site of Pablo Román
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@font-face {
+  font-family: "SSSocial";
+  src: url('assets/fonts/ss-social-circle.eot');
+  src: url('assets/fonts/ss-social-circle.eot?#iefix') format('embedded-opentype'),
+       url('assets/fonts/ss-social-circle.woff') format('woff'),
+       url('assets/fonts/ss-social-circle.ttf') format('truetype'),
+       url('assets/fonts/ss-social-circle.svg#SSSocialCircle') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =Reset styles
+-------------------------------------------------------------- */
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; }
+html, body { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; font-weight: 300; font-style: normal; font-size: 100%; font-family: inherit; }
+table { border-collapse: collapse; border-spacing: 0; }
+ol, ul { list-style: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; }
+hr { border: 0; border-top: 1px solid #F0EFEE; border-bottom: 1px solid #fff; margin: 2em 0; height: 0; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+img { height: auto; }
+img, object, embed { max-width: 100%; }
+
+.clear { clear: both; }
+.clearfix:after { clear: both; content: ' '; display: block; font-size: 0; line-height: 0; visibility: hidden; width: 0; height: 0; }
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+/* =Misc
+-------------------------------------------------------------- */
+.left { float: left; }
+.right { float: right; }
+.hide { display: none; }
+.upper { text-transform: uppercase; letter-spacing: 1px; }
+.row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
+.row:after, .clearfix:after { clear: both; }
+.row, .clearfix { zoom: 1; }
+.center { text-align: center; margin-left: auto; margin-right: auto; }
+
+/* =Columns
+-------------------------------------------------------------- */
+.column { position: relative; float: left; margin-right: 4%; }
+.half { width: 48%; }
+.third { width: 30.66%; }
+.fourth { width: 22%; }
+.fifth { width: 16.8%; }
+.sixth { width: 13.33%; }
+.two-third { width: 65.33%; }
+.three-fourth { width: 74%; }
+.last { margin-right: 0px; clear: right; }
+
+/* =Headlines and text
+-------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 { font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; font-weight: 700; line-height: 1.2; text-transform: uppercase; color: #363530; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, p a { font-weight: inherit; font-style: inherit; }
+
+h1 { font-size: 2.25em; letter-spacing: -1px; margin-bottom: 0.5em; }
+h2 { font-size: 1.5em; margin-bottom: 0.5em; }
+h3 { font-size: 1.375em; line-height: 1.6em; }
+h4 { font-size: 1em; }
+h5 { font-size: 1em; font-weight: normal; }
+h6 { font-size: 0.875em; font-weight: normal; }
+
+p { margin-bottom: 1em; }
+
+a { text-decoration: none; color: #EE0013; -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
+a:hover { color: #EE0013; }
+p a, li a { text-decoration: none; border-bottom: 1px solid rgba(238, 0, 19, 0.2); }
+p a:hover, li a:hover { border-bottom: 1px solid #EE0013; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+pre, code { font-family: Monaco, "Courier New", monospace; font-size: 80%; overflow: scroll; }
+input, textarea { font-family: "Helvetica", Arial, sans-serif; }
+.accent { color: #EE0013; }
+
+/* =Layout
+-------------------------------------------------------------- */
+body { margin: 0; font-family: 'Lora', Georgia, serif; font-size: 1em; font-weight: 300; line-height: 1.6; text-rendering: optimizeLegibility; color: #3D3D3D; background: #F5F5F3; background: #fff; }
+
+.wrapper { width: 90%; max-width: 960px; margin: 0px auto; position: relative; }
+#content { padding: 2em 0; }
+
+/* =Homepage
+-------------------------------------------------------------- */
+.home-intro { margin-bottom: 4em; }
+#home-tagline { font-size: 2.4em; letter-spacing: -1px; line-height: 1.4; margin-bottom: 0.6em; color: #363530; font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; text-transform: uppercase; font-weight: 700; }
+.home-photo { margin: 0px auto 0.5em; display: block; }
+.home-connect { text-align: center; font-size: 2em; margin-bottom: 0; }
+.entry-content .home-connect a, .entry-content .home-connect a:hover { border: none; }
+.expertise-headline { position: relative; text-align: center; }
+.expertise-headline hr { margin: 0; }
+.expertise-headline p { display: inline-block; background: #fff; padding: 0 1em; font-style: italic; color: #B1B1AF; font-size: 1em; position: relative; top: -1.125em; white-space: nowrap; }
+.expertise { margin-bottom: 1.5em; }
+
+/* =Header
+-------------------------------------------------------------- */
+.site-header { color: #444; background: #fff; line-height: 3em; font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
+.site-header .wrapper { border-bottom: 3px solid #EE0013; }
+.site-header a[rel='home'] { font-size: 1em; float: left; color: #444; text-transform: uppercase; }
+.site-header strong { color: #EE0013; font-size: 700; }
+nav { position: relative; float: right; }
+nav li { float: left; }
+nav a { font-size: 1em; padding: 0em 1em; display: inline-block; color: #444; text-transform: uppercase; }
+nav a:hover { background: #EE0013; color: #fff; }
+
+
+/* =Sidebar
+-------------------------------------------------------------- */
+#secondary { padding-bottom: 1.875em; margin-bottom: 1.875em; border-bottom: 1px solid #dedfe0; text-align: center; }
+#secondary h3 { margin-bottom: 0.875em; }
+#secondary ul li { line-height: 1.875em; }
+#secondary ul li a { font-weight: normal; }
+#secondary ul li a:hover { text-decoration: underline; }
+
+.attachment-main-thumb { z-index: 1; }
+
+ul.social_bar { text-align: center; }
+ul.social_bar li { display: inline-block; margin: 0 3px; }
+ul.social_bar li a { display: block; font-size: 2em; }
+ul.social_bar li a:hover { text-decoration: none; border: 0; background: none; }
+
+.icon-rss { color: #fc8c00; }
+.icon-linkedin { color: #0181ae; }
+.icon-googleplus { color: #ef4748; }
+.icon-facebook { color: #3B5998; }
+.icon-mail { color: #EE0013; }
+.icon-twitter { color: #3dc7f4; }
+
+/* =Blog
+-------------------------------------------------------------- */
+#header .wrapper { border-bottom: 1px solid #F0EFEE; padding: 2em 0; }
+#header h1 { margin-bottom: 0; }
+
+/* =Loop post
+-------------------------------------------------------------- */
+.loop-post { margin-bottom: 1.5em; border-bottom: 1px solid #F0EFEE; padding-bottom: 1.5em; }
+.loop-post h2 { font-size: 1.375em; }
+.loop-post a { border-bottom: 0; }
+.loop-post a:hover {  }
+.loop-post .comments-link { display: none; }
+.loop-post .entry-meta { padding: 0; }
+.loop-post .entry-date { text-transform: uppercase; font-size: 0.75em; font-family: "Lora", Georgia, serif; color: #BBBAB7; letter-spacing: 1px; }
+.loop-pagination { padding: 1.875em 0; clear: both; }
+.loop-pagination .small { font-size: 0.875em; color: #ADADAA; font-weight: normal; }
+.loop-pagination p { float: right; }
+.loop-pagination span, .loop-pagination a { color: #434d50; display: inline-block; float: left; margin: 0 2px; text-align: center; padding: 5px 0.625em; font-weight: bold; font-size: 1em; border-radius: 2px; }
+.loop-pagination a { border: 0; }
+.loop-pagination a:hover { background: #eef1f4; }
+.loop-pagination .current { background: #EE0013; color: #fff; }
+
+/* =Post
+-------------------------------------------------------------- */
+article.post { position: relative; max-width: 760px; margin: 0px auto; margin-bottom: 1.875em; border-bottom: 3px solid #E0DFDE; }
+.comments { position: relative; max-width: 760px; margin: 0px auto; }
+article footer { font-size: 0.8125em; color: #ADADAA; line-height: 2.5em; border-top: 3px solid #E0DFDE; }
+article .attachment-main_thumb { display: block; margin-bottom: 1.250em; width: 100%; }
+.entry-header { text-align: center; margin-bottom: 1.250em; }
+.next-post { background: #F2F2F2; padding: 0 1em; line-height: 2.5em; margin-bottom: 1em; border-radius: 3px; }
+h1.entry-title { margin-bottom: 0.5em; text-align: center; }
+h1.entry-title a { border: 0; }
+
+.entry-meta { font-size: 0.8125em; color: #ADADAA; line-height: 2.5em; }
+.entry-meta a { border: 0; }
+.entry-meta .posted-on { float: left; }
+.entry-meta .share-box { float: right; }
+.social-shares { float: right; }
+.social-shares li { position: relative; display: inline-block; margin-right: 5px; float: left; }
+.social-shares li i { font-size: 1.8em; position: relative; top: 6px; line-height: 1; }
+
+.entry-content { font-size: 1em; line-height: 1.8; overflow: hidden; margin-bottom: 1.875em; }
+.entry-content h2 { line-height: 2; margin: 0; }
+.entry-content p { margin-bottom: 1em; }
+.entry-content blockquote { font-family: "Georgia", Times New Roman, serif; background: #f5f5f5; padding: 0.625em 1.250em; margin-bottom: 1em; border-left: 3px solid #ddd; }
+.entry-content blockquote p:last-child { margin-bottom: 0; }
+.entry-content pre { padding: 1em; line-height: 1.5; background: #333; color: white; overflow: auto; font-size: 0.688em; margin-bottom: 1em; border-radius: 4px; }
+.entry-content code { background: #FFFEEE; border: 1px solid #F3F0BC; padding: 0.1em 0.3em; border-radius: 2px; color: #3F3F3F; }
+.entry-content pre a { color: #EE0013; border-bottom: 1px solid #EE0013; }
+.entry-content ul { list-style: disc; list-style-position: inside; }
+.entry-content ul li { padding-left: 2em; }
+.entry-content ul li:last-child { margin-bottom: 1em; }
+.entry-content .sources { font-size: 11px; color: #999; margin-top: 4.3%; }
+.entry-content .sources p { margin-bottom: 0; }
+.entry-content a { border-bottom: 1px solid rgba(238, 0, 19, 0.2); }
+.entry-content a:hover { border-bottom: 1px solid #EE0013; }
+.tag-links a { margin-right: 6px; font-weight: bold; }
+
+
+/* =Pages
+-------------------------------------------------------------- */
+.page-header { margin-bottom: 1.875em; }
+.page-header h1 { margin: 0; font-weight: normal; }
+
+/* =Images
+-------------------------------------------------------------- */
+a img { border: none; }
+p img { margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */ }
+p img.aligncenter { margin: 0px auto; display: block; }
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.wp-caption {
+	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+	height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+img.alignleft { margin-right: 1.25em; margin-bottom: 1.25em; float: left; }
+img.alignright { margin-left: 1.25em; margin-bottom: 1.25em; float: right; }
+.wp-caption { padding: .5em; text-align: center; }
+.wp-caption img { margin: .25em; }
+.wp-caption .wp-caption-text { margin: .5em; }
+.gallery-caption { }
+.wp-smiley { margin: 0; }
+img.outlined { border: 5px solid #f2f2f2; }
+
+
+
+/* =Forms
+-------------------------------------------------------------- */
+
+#searchform label { display: none; }
+#searchform input#s { width: 60%; margin: 0 1em 0 0; }
+textarea { width: 80%; }
+
+.button { background: #EE0013; display: inline-block; text-align: center; padding: 13px 34px 16px; color: #fff !important; text-decoration: none; font-weight: bold; line-height: 1; font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif; position: relative; cursor: pointer; border: none; width: auto; border: 1px solid rgba(0, 0, 0, 0.2); margin: 1em 0; border-radius: 2px; }
+.button:hover { background: #e84300; border: 1px solid rgba(0, 0, 0, 0.4); }
+
+.entry-content .button { text-decoration: none; }
+
+/* Don't use native buttons on iOS */
+input[type=submit].button, button.button { -webkit-appearance: none; }
+
+
+/* =Footer
+-------------------------------------------------------------- */
+#colophon { background: #D8D6CE; padding: 2em 0 4em; font-size: 0.875em; }
+#colophon h3 { color: #fff; }
+#colophon a { border-bottom: 0; }
+.latest-posts li { border-bottom: 1px solid rgba(255,255,255,0.6); padding: 0.4em 0; }
+.latest-posts li a { color: #3D3D3D; }
+.footer-contact i { color: #fff; font-size: 150%; margin-right: 0.6em; vertical-align: middle; }
+.footer-contact a { display: block; line-height: 2.3em; color: #3D3D3D; }
+.footer-contact a:hover { color: #3D3D3D; }
+.footer-license { margin-top: 3em; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.875em; padding: 0.6em 0; }
+.footer-license a { color: inherit; }
+.footer-colophon a { color: inherit; }
+
+/* =Icons
+-------------------------------------------------------------- */
+
+/* This triggers a redraw in IE to Fix IE8's :before content rendering. */
+html:hover [class^="icon-"]{-ms-zoom: 1;}
+
+.ss-icon, .ss-icon.ss-social, .ss-icon.ss-social-circle,
+[class^="icon-"]:before, [class*=" icon-"]:before,
+[class^="icon-"]:before, [class*=" icon-"]:before,
+[class^="icon-"].right:after, [class*=" icon-"].right:after,
+[class^="icon-"].right:after, [class*=" icon-"].right:after{
+  font-family: "SSSocial";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+
+i { font-style: normal; text-transform: none; }
+i[class^="icon-"]::before, i[class*=" icon-"]:before { font-family: 'SSSocial'; font-weight: normal; font-style: normal; display: inline-block; text-decoration: none; font-variant: normal; }
+a [class^="icon-"], a [class*=" icon-"] { display: inline-block; text-decoration: inherit; }
+
+
+
+.icon-facebook:before,.icon-facebook.right:after{content:''}
+.icon-twitter:before,.icon-twitter.right:after{content:''}
+.icon-linkedin:before,.icon-linkedin.right:after{content:''}
+.icon-googleplus:before,.icon-googleplus.right:after{content:''}
+.icon-mail:before,.icon-mail.right:after{content:'✉'}
+.icon-like:before,.icon-like.right:after{content:'👍'}
+.icon-rss:before,.icon-rss.right:after{content:''}
+
+
+/* =Media queries
+-------------------------------------------------------------- */
+@media screen and (max-width: 700px) and (min-width: 0) {
+	.site-header a[rel="home"] { display: block; text-align: center; float: none; }
+	header nav { text-align: center; float: none; display: none; }	
+	.column { float: none; width: 100%; margin-right: 0; }
+	#home-tagline { text-align: center; }
+	#colophon .column { margin-bottom: 2em; }
+	#cv h2 { border: 0; }
+}
+
+@media screen and (max-width: 360px) and (min-width: 0) {
+	#content { padding: 1.5em 0; }
+	.site-header a[rel="home"] { font-size: 1em; }
+	#home-tagline { font-size: 1.8em; }
+	h1.entry-title { font-size: 1.8em; }
+}
+
+
+@media print {
+    footer { display: none; }
+    body { background: #fff; color: #000; font-size: 9pt; }
+    .comments { display: none; }
+    article .attachment-main_thumb { display: none; }
+}
